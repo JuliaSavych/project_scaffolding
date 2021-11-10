@@ -1,0 +1,124 @@
+//file should include base styles all over the site
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100%;
+  position: relative;
+  overflow-x: hidden;
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.top-background {
+  background-color: $color-seashell-peach;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 140px;
+    height: 100%;
+    background-color: $color-red;
+  }
+}
+
+.main-heading {
+  font-family: $font-bolder, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 100px;
+  line-height: 1;
+  text-transform: capitalize;
+  color: $color-jacarta;
+  opacity: 0.05;
+}
+
+.heading {
+  font-family: $font-regular, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 48px;
+  color: $color-jacarta;
+
+  &_bold {
+    font-family: $font-bold, sans-serif;
+    font-weight: 700;
+  }
+
+  &_color-white {
+    color: $color-white;
+  }
+}
+
+.text {
+  font-family: $font-regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: $color-grey;
+}
+
+.wrapper {
+  position: relative;
+  margin: 0 auto;
+
+  @include respond-to(phone-only) {
+    max-width: calc(100% - 40px);
+  }
+}
+
+
+.line {
+  background-color: $color-red;
+  height: 25px;
+  position: absolute;
+
+  @include respond-to(phone-only) {
+    height: 12px;
+  }
+
+  &_horizontal {
+    width: 230px;
+    height: 15px;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    @include respond-to(phone-only) {
+      width: 150px;
+    }
+  }
+
+  &_vertical {
+    height: 140px;
+    width: 25px;
+
+    @include respond-to(phone-only) {
+      width: 12px;
+      height: 100px;
+    }
+  }
+}
